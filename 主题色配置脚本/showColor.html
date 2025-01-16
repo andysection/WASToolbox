@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Editor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .color-entry {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+    }
+
+    .color-entry label {
+      margin-right: 10px;
+      width: 80px;
+    }
+
+    .color-entry input {
+      width: 120px;
+      padding: 5px;
+    }
+
+    .color-entry button {
+      padding: 5px 10px;
+      margin-left: 10px;
+    }
+
+    #color-list {
+      margin-top: 20px;
+    }
+
+    .color-list-item {
+      display: flex;
+      align-items: center;
+      margin: 5px 0;
+    }
+
+    .color-box {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+
+    .color-comment {
+      margin-left: 10px;
+      font-style: italic;
+      color: #666;
+    }
+
+    #download-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+
+    #file-input {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Color Editor</h1>
+
+  <!-- File input to upload the JSON -->
+  <input type="file" id="file-input" accept=".json" />
+  
+  <div id="color-list"></div>
+
+  <button id="download-btn">Download JSON</button>
+
+  <script>
+    let colorList = [];
+    const colorListDiv = document.getElementById('color-list');
+    const downloadBtn = document.getElementById('download-btn');
+    const fileInput = document.getElementById('file-input');
+
+    // Normalize color value: Convert 0x to # format
+    function normalizeColorValue(value) {
+      if (value.startsWith('0x')) {
+        return '#' + value.slice(2).toUpperCase(); // Remove '0x' and prepend '#'
+      }
+      return value; // Return as-is if not '0x'
+    }
+
+    // Load JSON file selected by user
+    fileInput.addEventListener('change', (event) => {
+      const file = event.target.files[0];
+      if (file && file.type === 'application/json') {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          try {
+            const data = JSON.parse(e.target.result);
+            if (data.colors && Array.isArray(data.colors)) {
+              colorList = data.colors;
+              updateColorList();
+            } else {
+              alert('Invalid JSON format. The "colors" array is missing.');
+            }
+          } catch (error) {
+            alert('Failed to load JSON: ' + error.message);
+          }
+        };
+        reader.readAsText(file);
+      } else {
+        alert('Please upload a valid JSON file.');
+      }
+    });
+
+    // Update the color list display
+    function updateColorList() {
+      colorListDiv.innerHTML = '';
+      colorList.forEach((color, index) => {
+        const colorItem = document.createElement('div');
+        colorItem.classList.add('color-list-item');
+
+        const colorBox = document.createElement('div');
+        colorBox.classList.add('color-box');
+        colorBox.style.backgroundColor = normalizeColorValue(color.value);  // Use normalized color
+
+        const colorName = document.createElement('input');
+        colorName.type = 'text';
+        colorName.value = color.name;
+        colorName.disabled = true; // Disable editing color name
+
+        const colorInput = document.createElement('input');
+        colorInput.type = 'color';
+        colorInput.value = normalizeColorValue(color.value);  // Use normalized color for input
+
+        const comment = document.createElement('div');
+        comment.classList.add('color-comment');
+        comment.textContent = color.comment || '';  // Display comment
+
+        const saveBtn = document.createElement('button');
+        saveBtn.textContent = 'Save';
+        saveBtn.onclick = () => saveColor(index, colorInput.value);
+
+        colorItem.appendChild(colorBox);
+        colorItem.appendChild(colorName);
+        colorItem.appendChild(colorInput);
+        colorItem.appendChild(comment);
+        colorItem.appendChild(saveBtn);
+        colorListDiv.appendChild(colorItem);
+      });
+    }
+
+    // Save updated color
+    function saveColor(index, newValue) {
+      colorList[index].value = newValue;
+      updateColorList();
+    }
+
+    // Download the updated color list as a JSON file
+    downloadBtn.addEventListener('click', () => {
+      const json = JSON.stringify({ colors: colorList }, null, 2);
+      const blob = new Blob([json], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'updated_colors.json';
+      a.click();
+      URL.revokeObjectURL(url);  // Clean up the URL object
+    });
+  </script>
+</body>
+</html>

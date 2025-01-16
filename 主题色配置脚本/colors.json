@@ -1,0 +1,23 @@
+{
+  "colors": [
+    { "name": "brandColor", "value": "0x5935DE", "comment": "品牌色" },
+    { "name": "subColor1", "value": "0xC9BEFF", "comment": "辅助色一" },
+    { "name": "subColor2", "value": "0xE9E5FF", "comment": "辅助色二" },
+    { "name": "alertColor", "value": "0xDD4D38", "comment": "警示色" },
+    { "name": "darkBackgroundColor", "value": "0x000000", "comment": "背景色深色" },
+    { "name": "lightBackgroundColor", "value": "0xFFFFFF", "comment": "背景色浅色" },
+    { "name": "selectColor", "value": "0x47944A", "comment": "选中色" },
+    { "name": "lineColor", "value": "0xA4A4A4", "comment": "下划线分割线颜色" },
+    { "name": "contentColor", "value": "0xF2F2F2", "comment": "对话框颜色" },
+    { "name": "mainTextColor", "value": "0x000000", "comment": "一级字体颜色" },
+    { "name": "subTextColor", "value": "0x666666", "comment": "二级字体颜色" },
+    { "name": "otherTextColor", "value": "0x797979", "comment": "辅助字体颜色" },
+    { "name": "mainTextColorForDark", "value": "0xFFFFFF", "comment": "辅助字体颜色深色背景时" },
+    { "name": "BTNBgColor5935DE", "value": "0x5935DE", "comment": "按钮背景色3" },
+    { "name": "BTNBgColorC0C0C0", "value": "0xC0C0C0", "comment": "按钮背景色2" },
+    { "name": "BTNBgColorFFFFFF", "value": "0xFFFFFF", "comment": "按钮背景色1" },
+    { "name": "BTNTextColor000000", "value": "0x000000", "comment": "按钮文字色1" },
+    { "name": "BTNTextColorFFFFFF", "value": "0xFFFFFF", "comment": "按钮文字色2" },
+    { "name": "BTNTextColor797979", "value": "#797979", "comment": "按钮文字色3" }
+  ]
+}
