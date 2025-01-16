@@ -2,110 +2,131 @@
 <resources>
     <color name="colorPrimary">#7183BB</color>
     <color name="colorPrimaryDark">#7183BB</color>
-    <color name="colorAccent">#7183BB</color>
-    <color name="xm_background">#FFFFFF</color>
-    <color name="xm_button_color_normal">@color/colorPrimary</color>
-    <color name="xm_button_color_pressed">@color/colorPrimary</color>
-    <color name="xm_button_color_disable">@color/colorPrimary</color>
+	<color name="colorAccent">#7183BB</color>
+	<color name="xm_background">#FFFFFF</color>
+	<color name="xm_button_color_normal">@color/colorPrimary</color>
+	<color name="xm_button_color_pressed">@color/colorPrimary</color>
+	<color name="xm_button_color_disable">@color/colorPrimary</color>
+	<color name="black">#FF000000</color>
+	<color name="white">#FFFFFFFF</color>
+	<color name="transparent">#00FFFFFF</color>
+	<color name="white_text">#FFF</color>
+	<color name="black_text">#333333</color>
+	<!--  主色（主要按钮，图标）  -->
+	<color name="color_primary">#5935DE</color>
 
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="transparent">#00FFFFFF</color>
+	<!--  辅助色：主辅助色（头像背景）  -->
+	<color name="color_auxiliary_primary">#C9BEFF</color>
 
-    <color name="white_text">#FFF</color>
-    <color name="black_text">#333333</color>
+	<!--  辅助色：次辅助色（对话框）  -->
+	<color name="color_auxiliary_secondary">#E9E5FF</color>
 
+	<!--  辅助色：警示色  -->
+	<color name="color_warning">#DD4D38</color>
 
-    <!--  颜色规范  -->
-    <!--  主色（主要按钮，图标）  -->
-    <color name="color_primary">#5935DE</color>
+	<!--  辅助色：选中色  -->
+	<color name="color_selected">#47944A</color>
 
-    <!--  辅助色：主辅助色（头像背景）  -->
-    <color name="color_auxiliary_primary">#C9BEFF</color>
-    <!--  辅助色：次辅助色（对话框）  -->
-    <color name="color_auxiliary_secondary">#E9E5FF</color>
-    <!--  辅助色：警示色  -->
-    <color name="color_warning">#DD4D38</color>
-    <!--  辅助色：选中色  -->
-    <color name="color_selected">#47944A</color>
-    <!--  辅助色：背景（黑）  -->
-    <color name="color_bg_black">#000000</color>
-    <!--  辅助色：背景（白）  -->
-    <color name="color_bg_white">#FFFFFF</color>
+	<!--  辅助色：背景（黑）  -->
+	<color name="color_bg_black">#000000</color>
 
-    <!--  中性色：下划、分割线  -->
-    <color name="color_line">#A4A4A4</color>
-    <!--  中性色：框色（对话框，名片）  -->
-    <color name="color_stroke">#F2F2F2</color>
+	<!--  辅助色：背景（白）  -->
+	<color name="color_bg_white">#FFFFFF</color>
 
-    <!--  字体颜色：一级文字色（标题/正文）  -->
-    <color name="text_color_primary">#000000</color>
-    <!--  字体颜色：二级文字色（提示）  -->
-    <color name="text_color_secondary">#666666</color>
-    <!--  字体颜色：辅助文字色（说明）  -->
-    <color name="text_color_auxiliary">#797979</color>
-    <!--  字体颜色：反黑文字色  -->
-    <color name="text_color_anti_black">#FFFFFF</color>
+	<!--  中性色：下划、分割线  -->
+	<color name="color_line">#A4A4A4</color>
 
+	<!--  中性色：框色（对话框，名片）  -->
+	<color name="color_stroke">#F2F2F2</color>
 
-    <!--  按钮规范  -->
-    <!--  主要按钮：按钮背景色  -->
-    <color name="btn_bg_color_primary">#5935DE</color>
-    <!--  主要按钮：按钮字体颜色  -->
-    <color name="btn_text_color_primary">#FFFFFF</color>
+	<!--  字体颜色：一级文字色（标题/正文）  -->
+	<color name="text_color_primary">#000000</color>
 
-    <!--  次级按钮1：按钮背景色  -->
-    <color name="btn_bg_color_secondary_solid">#C0C0C0</color>
-    <!--  次级按钮1：按钮字体颜色  -->
-    <color name="btn_text_color_secondary_solid">#FFFFFF</color>
+	<!--  字体颜色：二级文字色（提示）  -->
+	<color name="text_color_secondary">#666666</color>
 
-    <!--  次级按钮2：按钮背景色  -->
-    <color name="btn_bg_color_secondary_stroke">#FFFFFF</color>
-    <!--  次级按钮2：按钮描边颜色  -->
-    <color name="btn_stroke_color_secondary_stroke">#000000</color>
-    <!--  次级按钮2：按钮字体颜色  -->
-    <color name="btn_text_color_secondary_stroke">#000000</color>
+	<!--  字体颜色：辅助文字色（说明）  -->
+	<color name="text_color_auxiliary">#797979</color>
 
-    <!--  特殊按钮(不可点击)：按钮背景色  -->
-    <color name="btn_bg_color_disable">#C0C0C0</color>
-    <!--  特殊按钮(不可点击)：按钮字体颜色  -->
-    <color name="btn_text_color_disable">#797979</color>
+	<!--  字体颜色：反黑文字色  -->
+	<color name="text_color_anti_black">#FFFFFF</color>
 
+	<!--  主要按钮：按钮背景色  -->
+	<color name="btn_bg_color_primary">#5935DE</color>
 
-    <!--  组件规范  -->
-    <!--  顶栏1（深色）：顶栏背景色  -->
-    <color name="dark_top_bar_bg_color">#000000</color>
-    <!--  顶栏1（深色）：标题文字颜色  -->
-    <color name="dark_top_bar_text_color">#FFFFFF</color>
+	<!--  主要按钮：按钮字体颜色  -->
+	<color name="btn_text_color_primary">#FFFFFF</color>
 
-    <!--  顶栏2（浅色）：顶栏背景色  -->
-    <color name="light_top_bar_bg_color">#FFFFFF</color>
-    <!--  顶栏2（浅色）：标题文字颜色  -->
-    <color name="light_top_bar_text_color">#000000</color>
+	<!--  次级按钮1：按钮背景色  -->
+	<color name="btn_bg_color_secondary_solid">#C0C0C0</color>
 
-    <!--  搜索框：搜索框背景色  -->
-    <color name="search_bg_color">#FFFFFF</color>
-    <!--  搜索框：搜索框边框色  -->
-    <color name="search_text_color">#797979</color>
+	<!--  次级按钮1：按钮字体颜色  -->
+	<color name="btn_text_color_secondary_solid">#FFFFFF</color>
 
-    <!--  输入框：输入框背景色  -->
-    <color name="input_bg_color">#ECECEC</color>
-    <!--  输入框：输入框边框色  -->
-    <color name="input_stroke_color">#CAC7C4</color>
+	<!--  次级按钮2：按钮背景色  -->
+	<color name="btn_bg_color_secondary_stroke">#FFFFFF</color>
 
-    <!--  底栏：底栏背景色  -->
-    <color name="bottom_bar_bg_color">#FFFFFF</color>
+	<!--  次级按钮2：按钮描边颜色  -->
+	<color name="btn_stroke_color_secondary_stroke">#000000</color>
 
+	<!--  次级按钮2：按钮字体颜色  -->
+	<color name="btn_text_color_secondary_stroke">#000000</color>
 
+	<!--  特殊按钮(不可点击)：按钮背景色  -->
+	<color name="btn_bg_color_disable">#C0C0C0</color>
 
-<!--    头像默认色-->
-    <color name="avatar_color0">#FBD872</color>
-    <color name="avatar_color1">#C2ED4D</color>
-    <color name="avatar_color2">#64C7B0</color>
-    <color name="avatar_color3">#6CACE4</color>
-    <color name="avatar_color4">#735BF5</color>
-    <color name="avatar_color5">#FF7F74</color>
-    <color name="avatar_color6">#FE69C3</color>
-    <color name="avatar_color7">#FF8F1C</color>
+	<!--  特殊按钮(不可点击)：按钮字体颜色  -->
+	<color name="btn_text_color_disable">#797979</color>
+
+	<!--  顶栏1（深色）：顶栏背景色  -->
+	<color name="dark_top_bar_bg_color">#000000</color>
+
+	<!--  顶栏1（深色）：标题文字颜色  -->
+	<color name="dark_top_bar_text_color">#FFFFFF</color>
+
+	<!--  顶栏2（浅色）：顶栏背景色  -->
+	<color name="light_top_bar_bg_color">#FFFFFF</color>
+
+	<!--  顶栏2（浅色）：标题文字颜色  -->
+	<color name="light_top_bar_text_color">#000000</color>
+
+	<!--  搜索框：搜索框背景色  -->
+	<color name="search_bg_color">#FFFFFF</color>
+
+	<!--  搜索框：搜索框边框色  -->
+	<color name="search_text_color">#797979</color>
+
+	<!--  输入框：输入框背景色  -->
+	<color name="input_bg_color">#ECECEC</color>
+
+	<!--  输入框：输入框边框色  -->
+	<color name="input_stroke_color">#CAC7C4</color>
+
+	<!--  底栏：底栏背景色  -->
+	<color name="bottom_bar_bg_color">#FFFFFF</color>
+
+	<!--  头像默认色1  -->
+	<color name="avatar_color0">#FBD872</color>
+
+	<!--  头像默认色2  -->
+	<color name="avatar_color1">#C2ED4D</color>
+
+	<!--  头像默认色3  -->
+	<color name="avatar_color2">#64C7B0</color>
+
+	<!--  头像默认色4  -->
+	<color name="avatar_color3">#6CACE4</color>
+
+	<!--  头像默认色5  -->
+	<color name="avatar_color4">#735BF5</color>
+
+	<!--  头像默认色6  -->
+	<color name="avatar_color5">#FF7F74</color>
+
+	<!--  头像默认色7  -->
+	<color name="avatar_color6">#FE69C3</color>
+
+	<!--  头像默认色8  -->
+	<color name="avatar_color7">#FF8F1C</color>
 
 </resources>

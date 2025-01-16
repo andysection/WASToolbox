@@ -70,7 +70,7 @@ def process_color_data(input_json_path):
     
 
 # 输入和输出文件路径
-input_json_file = 'colors.json'  # 你的输入 JSON 文件路径
+input_json_file = 'iOSColors.json'  # 你的输入 JSON 文件路径
 
 # 调用函数
 process_color_data(input_json_file)

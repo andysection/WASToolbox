@@ -17,8 +17,18 @@ def process_color_data(input_json_path):
             # 写入固定的头部内容
             txt_file.write('<?xml version="1.0" encoding="utf-8"?>\n')
             txt_file.write('<resources>\n')
-            txt_file.write('<color name="colorPrimary">#7183BB</color>\n<color name="colorPrimaryDark">#7183BB</color>\n<color name="colorAccent">#7183BB</color>\n<color name="xm_background">#FFFFFF</color>\n<color name="xm_button_color_normal">@color/colorPrimary</color>\n<color name="xm_button_color_pressed">@color/colorPrimary</color>\n<color name="xm_button_color_disable">@color/colorPrimary</color>\n<color name="black">#FF000000</color>\n<color name="white">#FFFFFFFF</color>\n<color name="transparent">#00FFFFFF</color>\n<color name="white_text">#FFF</color>\n<color name="black_text">#333333</color>\n')
-            txt_file.write('#pragma mark + 颜色配置\n\n')
+            txt_file.write('\t<color name="colorPrimary">#7183BB</color>\n')
+            txt_file.write('\t<color name="colorPrimaryDark">#7183BB</color>\n')
+            txt_file.write('\t<color name="colorAccent">#7183BB</color>\n')
+            txt_file.write('\t<color name="xm_background">#FFFFFF</color>\n')
+            txt_file.write('\t<color name="xm_button_color_normal">@color/colorPrimary</color>\n')
+            txt_file.write('\t<color name="xm_button_color_pressed">@color/colorPrimary</color>\n')
+            txt_file.write('\t<color name="xm_button_color_disable">@color/colorPrimary</color>\n')
+            txt_file.write('\t<color name="black">#FF000000</color>\n')
+            txt_file.write('\t<color name="white">#FFFFFFFF</color>\n')
+            txt_file.write('\t<color name="transparent">#00FFFFFF</color>\n')
+            txt_file.write('\t<color name="white_text">#FFF</color>\n')
+            txt_file.write('\t<color name="black_text">#333333</color>\n')
 
             # 遍历每个颜色条目并按要求写入文件
             for color in data['colors']:
@@ -30,13 +40,13 @@ def process_color_data(input_json_path):
                     value = '#' + value[2:].upper()  # 去掉 #，并转换为 0x 前缀
 
                 # 使用 - 连接字段
-                color_line = f"<!--  {comment}  -->\n<color name=\"{name}\">{value}</color>\n"
+                color_line = f"\t<!--  {comment}  -->\n\t<color name=\"{name}\">{value}</color>\n\n"
                 
                 # 写入到文件
                 txt_file.write(color_line)
                 # print(f"Written: {color_line.strip()}")  # 打印正在写入的内容
             # 写入文件尾部的结束标记
-            txt_file.write('@end\n')
+            txt_file.write('</resources>\n')
             print(f"Android written to {output_xml_file} successfully")
 
     
