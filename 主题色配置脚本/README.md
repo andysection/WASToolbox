@@ -33,3 +33,15 @@ output_h_file = 'MMAppTheme+Color.h'
 #define     HexColor(color)             [UIColor colorWithRed:((float)((color & 0xFF0000) >> 16))/255.0 green:((float)((color & 0xFF00) >> 8))/255.0 blue:((float)(color & 0xFF))/255.0 alpha:1.0]
 #define     HexAColor(color, a)         [UIColor colorWithRed:((float)((color & 0xFF0000) >> 16))/255.0 green:((float)((color & 0xFF00) >> 8))/255.0 blue:((float)(color & 0xFF))/255.0 alpha:a]
 ```
+
+* 项目依赖vscode工具 live server插件
+右击html文件使用在liveServer中打开即可
+
+* 如果需要再局域网中使用
+Cmd+shift+P 输入 open settings json
+找到workplace的配置 新增json
+```
+"liveServer.settings.host": "0.0.0.0",
+"liveServer.settings.port": 5500
+```
+    
